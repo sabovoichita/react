@@ -7,6 +7,11 @@ import reportWebVitals from "./reportWebVitals";
 // Define the JSX constant first
 const JSX2 = (
   <div className="myDiv">
+    <div>
+      <h2>Welcome to React!</h2> <br />
+      <p>Be sure to close all tags!</p>
+      <hr />
+    </div>
     <h1>Add a class to this div</h1>
 
     <h1>Hello World</h1>
