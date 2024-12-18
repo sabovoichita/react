@@ -5,6 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // Define the JSX constant first
+const MyComponent = function () {
+  // Change code below this line
+
+  return <div>text</div>;
+
+  // Change code above this line
+};
+
 const JSX2 = (
   <div className="myDiv">
     <div>
@@ -44,7 +52,8 @@ root.render(
   </React.StrictMode>
 );
 
-root.render(JSX2, document.getElementById("challenge-node"));
+root.render(JSX2);
+// root.render(JSX2, document.getElementById("challenge-node"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
