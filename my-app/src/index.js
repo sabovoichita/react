@@ -4,6 +4,21 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+class MyComponent1 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Change code below this line
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    );
+    // Change code above this line
+  }
+}
+
 // Define the JSX constant first
 const MyComponent = function () {
   // Change code below this line
@@ -45,6 +60,8 @@ const JSX1 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent1 />
+    <MyComponent />
     {JSX} {/* Render the JSX directly */}
     {JSX1} {/* Render the JSX1 directly */}
     <App />
