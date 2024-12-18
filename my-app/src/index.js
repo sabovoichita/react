@@ -4,6 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+class MyComponent2 extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+
+  render() {
+    return <h1>My First React Component!</h1>;
+  }
+}
+
 // Individual Components
 const NonCitrus = () => (
   <div>
@@ -114,6 +124,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent2 />
     <TypesOfFood />
     <ParentComponent />
     <MyComponent1 />
@@ -124,12 +135,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// Render the TypesOfFood component to the DOM
-const challengeNode = ReactDOM.createRoot(
-  document.getElementById("challenge-node")
-);
-challengeNode.render(<TypesOfFood />);
 
 // Performance Measurement
 reportWebVitals();
