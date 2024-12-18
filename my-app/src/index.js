@@ -6,12 +6,24 @@ import reportWebVitals from "./reportWebVitals";
 
 // Define the JSX constant first
 const JSX = <h1 className="h1">Hello JSX!</h1>;
+const JSX1 = (
+  <div>
+    <h1>Paragraph One</h1>
+    <p>Paragraph Three</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+);
 
 // Render the application
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {JSX} {/* Render the JSX directly */}
+    {JSX1} {/* Render the JSX1 directly */}
     <App />
     {/* Remove <JSX /> here, as it is not a valid component */}
   </React.StrictMode>
