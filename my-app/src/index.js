@@ -4,139 +4,71 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const NonCitrus = () => {
-  return (
-    <div>
-      <h2>NonCitrus:</h2>
-      <ul>
-        <li>Apples</li>
-        <li>Blueberries</li>
-        <li>Strawberries</li>
-        <li>Bananas</li>
-      </ul>
-    </div>
-  );
-};
+// Individual Components
+const NonCitrus = () => (
+  <div>
+    <h2>NonCitrus:</h2>
+    <ul>
+      <li>Apples</li>
+      <li>Blueberries</li>
+      <li>Strawberries</li>
+      <li>Bananas</li>
+    </ul>
+  </div>
+);
 
-const Citrus = () => {
-  return (
-    <div>
-      <h2>Citrus:</h2>
-      <ul>
-        <li>Lemon</li>
-        <li>Lime</li>
-        <li>Orange</li>
-        <li>Grapefruit</li>
-      </ul>
-    </div>
-  );
-};
+const Citrus = () => (
+  <div>
+    <h2>Citrus:</h2>
+    <ul>
+      <li>Lemon</li>
+      <li>Lime</li>
+      <li>Orange</li>
+      <li>Grapefruit</li>
+    </ul>
+  </div>
+);
 
-const Vegetables = () => {
-  return (
-    <div>
-      <h2>Vegetables:</h2>
-      <ul>
-        <li>Brussel Sprouts</li>
-        <li>Broccoli</li>
-        <li>Squash</li>
-      </ul>
-    </div>
-  );
-};
+const Vegetables = () => (
+  <div>
+    <h2>Vegetables:</h2>
+    <ul>
+      <li>Brussels Sprouts</li>
+      <li>Broccoli</li>
+      <li>Squash</li>
+    </ul>
+  </div>
+);
 
+// Fruits and Food Types
 class Fruits extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     return (
       <div>
         <h2>Fruits:</h2>
-        {/* Change code below this line */}
         <NonCitrus />
         <Citrus />
-
-        {/* Change code above this line */}
       </div>
     );
   }
 }
 
 class TypesOfFood extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     return (
       <div>
         <h1>Types of Food:</h1>
-        {/* Change code below this line */}
         <Fruits />
         <Vegetables />
-
-        {/* Change code above this line */}
-        <Vegetables />
       </div>
     );
   }
 }
 
-const TypesOfFruit = () => {
-  return (
-    <div>
-      <h2>Fruits1:</h2>
-      <ul>
-        <li>Apples</li>
-        <li>Blueberries</li>
-        <li>Strawberries</li>
-        <li>Bananas</li>
-      </ul>
-    </div>
-  );
-};
+// Example of Parent and Child Components
+const ChildComponent = () => <p>I am the child</p>;
 
-const Fruits1 = () => {
-  return (
-    <div>
-      {/* Change code below this line */}
-      <TypesOfFruit />
-      {/* Change code above this line */}
-    </div>
-  );
-};
-
-class TypesOfFood1 extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
-  render() {
-    return (
-      <div>
-        <h1>Types of Food:</h1>
-        {/* Change code below this line */}
-        <Fruits1 />
-        {/* Change code above this line */}
-      </div>
-    );
-  }
-}
-
-// Child Component
-const ChildComponent = () => {
-  return (
-    <div>
-      <p>I am the child</p>
-    </div>
-  );
-};
-
-// Parent Component
 class ParentComponent extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     return (
       <div>
@@ -147,29 +79,19 @@ class ParentComponent extends React.Component {
   }
 }
 
-// Class Component Example
+// Simple Component Examples
+const MyComponent = () => <div>My Simple Component</div>;
+
 class MyComponent1 extends React.Component {
   render() {
-    return (
-      <div>
-        <h1>Hello React!</h1>
-      </div>
-    );
+    return <h1>Hello React!</h1>;
   }
 }
-
-//  Define the JSX constant first
-const MyComponent = function () {
-  // Change code below this line
-  return <div>text</div>;
-  // Change code above this line
-};
 
 // JSX Examples
 const JSX = <h1 className="h1">Hello JSX!</h1>;
 const JSX1 = (
   <div>
-    {/* comments area */}
     <h1>Paragraph One</h1>
     <p>Paragraph Three</p>
     <ul>
@@ -181,23 +103,18 @@ const JSX1 = (
 );
 const JSX2 = (
   <div className="myDiv">
-    <div>
-      <h2>Welcome to React!</h2> <br />
-      <p>Be sure to close all tags!</p>
-      <hr />
-    </div>
-    <h1>Add a class to this div</h1>
+    <h2>Welcome to React!</h2>
+    <p>Be sure to close all tags!</p>
     <h1>Hello World</h1>
-    <p>Lets render this to the DOM</p>
+    <p>Let's render this to the DOM</p>
   </div>
 );
 
-// Render All Components and JSX Together
+// Render All Components
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <TypesOfFood />
-    <TypesOfFood1 />
     <ParentComponent />
     <MyComponent1 />
     <MyComponent />
@@ -208,13 +125,11 @@ root.render(
   </React.StrictMode>
 );
 
-// Start Measuring Performance
+// Render the TypesOfFood component to the DOM
+const challengeNode = ReactDOM.createRoot(
+  document.getElementById("challenge-node")
+);
+challengeNode.render(<TypesOfFood />);
 
-// root.render(JSX2);
-// root.render(JSX2, document.getElementById("challenge-node"));
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
+// Performance Measurement
 reportWebVitals();
