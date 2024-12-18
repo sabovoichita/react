@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 const JSX = <h1 className="h1">Hello JSX!</h1>;
 const JSX1 = (
   <div>
+    {/* comments area */}
     <h1>Paragraph One</h1>
     <p>Paragraph Three</p>
     <ul>
