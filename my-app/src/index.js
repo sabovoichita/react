@@ -4,6 +4,31 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const List = (props) => {
+  //  {/* Change code below this line */}
+  return <p>{props.tasks.join(", ")}</p>;
+  // {/* Change code above this line */}
+};
+
+class ToDo extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <div>
+        <h1>To Do Lists</h1>
+        <h2>Today</h2>
+        {/* Change code below this line */}
+        <List tasks={["HTML", "CSS", "JS"]} />
+        <h2>Tomorrow</h2>
+        <List tasks={["Saas", "React", "Redux"]} />
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
 const CurrentDate = (props) => {
   return (
     <div>
@@ -150,6 +175,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ToDo />
     <Calendar />
     <MyComponent2 />
     <TypesOfFood />
