@@ -5,6 +5,24 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    // Only change code below this line
+    this.state = {
+      firstName: "Ana",
+    };
+    // Only change code above this line
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.firstName}</h1>
+      </div>
+    );
+  }
+}
+
 class CampSite extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -282,6 +300,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <StatefulComponent />
     <CampSite />
     <App1 />
     <ShoppingCart />
