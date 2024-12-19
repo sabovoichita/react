@@ -5,6 +5,27 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent4 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "LearnNewProgram",
+    };
+  }
+  render() {
+    // Change code below this line
+    const name = this.state.name;
+    // Change code above this line
+    return (
+      <div>
+        {/* Change code below this line */}
+        <h1>{name}</h1>
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
 class MyComponent3 extends React.Component {
   constructor(props) {
     super(props);
@@ -318,6 +339,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent4 />
     <MyComponent3 />
     <StatefulComponent />
     <CampSite />
