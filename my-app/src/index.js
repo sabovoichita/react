@@ -4,6 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const ShoppingCart = (props) => {
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+  );
+};
+// Change code below this line
+
+ShoppingCart.defaultProps = {
+  items: 0,
+};
+
 const List = (props) => {
   //  {/* Change code below this line */}
   return <p>{props.tasks.join(", ")}</p>;
@@ -175,6 +188,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ShoppingCart />
     <ToDo />
     <Calendar />
     <MyComponent2 />
