@@ -3,9 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import PropTypes from "prop-types";
 
 const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
+};
+
+// Change code below this line
+Items.propTypes = { quantity: PropTypes.number.isRequired };
+// Change code above this line
+
+Items.defaultProps = {
+  quantity: 0,
 };
 
 Items.defaultProps = {
@@ -17,15 +26,24 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    {
-      /* Change code below this line */
-    }
-    return <Items quantity={10} />;
-    {
-      /* Change code above this line */
-    }
+    return <Items />;
   }
 }
+
+// class ShoppingCart extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     {
+//       /* Change code below this line */
+//     }
+//     return <Items quantity={10} />;
+//     {
+//       /* Change code above this line */
+//     }
+//   }
+// }
 
 // const ShoppingCart = (props) => {
 //   return (
