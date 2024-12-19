@@ -5,6 +5,27 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class CampSite extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <div>
+        <Camper />
+      </div>
+    );
+  }
+}
+// Change code below this line
+const Camper = (props) => {
+  return <p>{props.name}</p>;
+};
+
+Camper.defaultProps = { name: "CamperBot" };
+
+Camper.propTypes = { name: PropTypes.string.isRequired };
+
 class App1 extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -21,9 +42,9 @@ class App1 extends React.Component {
 }
 
 class Welcome extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <div>
@@ -54,9 +75,9 @@ Items.defaultProps = {
 };
 
 class ShoppingCart extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return <Items />;
   }
@@ -261,6 +282,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <CampSite />
     <App1 />
     <ShoppingCart />
     <ToDo />
