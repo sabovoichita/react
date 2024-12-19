@@ -5,6 +5,38 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class App1 extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <div>
+        {/* Change code below this line */}
+        <Welcome name={"Adrian"} />
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        {/* Change code below this line */}
+        <p>
+          Hello, <strong>{this.props.name}</strong>!
+        </p>
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
 const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
 };
@@ -229,6 +261,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <App1 />
     <ShoppingCart />
     <ToDo />
     <Calendar />
