@@ -5,6 +5,33 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent6 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "Hello",
+    };
+    // Change code below this line
+    this.handleClick = this.handleClick.bind(this);
+    // Change code above this line
+  }
+  handleClick() {
+    this.setState({
+      text: "You clicked!",
+    });
+  }
+  render() {
+    return (
+      <div>
+        {/* Change code below this line */}
+        <button onClick={this.handleClick}>Click Me</button>
+        {/* Change code above this line */}
+        <h1>{this.state.text}</h1>
+      </div>
+    );
+  }
+}
+
 class MyComponent5 extends React.Component {
   constructor(props) {
     super(props);
@@ -364,6 +391,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent6 />
     <MyComponent5 />
     <MyComponent4 />
     <MyComponent3 />
