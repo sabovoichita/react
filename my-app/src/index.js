@@ -5,6 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent8 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() {
+    // Change code below this line
+    console.log("hello");
+    // Change code above this line
+  }
+  render() {
+    return <div />;
+  }
+}
+
 class MyApp1 extends React.Component {
   constructor(props) {
     super(props);
@@ -633,6 +647,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent8 />
     <MyApp1 />
     <MyApp />
     <MyForm />
