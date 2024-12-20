@@ -5,6 +5,31 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent9 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeUsers: null,
+    };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        activeUsers: 1273,
+      });
+    }, 5500);
+  }
+  render() {
+    return (
+      <div>
+        {/* Change code below this line */}
+        <h1>Active Users:{this.state.activeUsers} </h1>
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
 class MyComponent8 extends React.Component {
   constructor(props) {
     super(props);
@@ -647,6 +672,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent9 />
     <MyComponent8 />
     <MyApp1 />
     <MyApp />
