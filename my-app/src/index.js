@@ -5,6 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+const styles = { color: "purple", fontSize: 40, border: "2px solid purple" };
+// Change code above this line
+class Colorful1 extends React.Component {
+  render() {
+    // Change code below this line
+    return <div style={styles}>Style Me!</div>;
+    // Change code above this line
+  }
+}
+
 class Colorful extends React.Component {
   render() {
     return <div style={{ color: "red", fontSize: 72 }}>Big Red</div>;
@@ -760,6 +770,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Colorful1 />
     <Colorful />
     <Controller />
     <MyComponent10 />
