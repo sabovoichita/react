@@ -5,6 +5,43 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent10 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "Hey! ",
+    };
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+  // Change code below this line
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+    console.log(this.handleKeyPress);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
+  }
+  // Change code above this line
+  handleEnter() {
+    this.setState((state) => ({
+      message: state.message + "You pressed the enter key! ",
+    }));
+  }
+  handleKeyPress(event) {
+    if (event.keyCode === 13) {
+      this.handleEnter();
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.message}</h1>
+      </div>
+    );
+  }
+}
+
 class MyComponent9 extends React.Component {
   constructor(props) {
     super(props);
@@ -672,6 +709,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent10 />
     <MyComponent9 />
     <MyComponent8 />
     <MyApp1 />
