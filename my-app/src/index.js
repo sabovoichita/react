@@ -6,9 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
 class OnlyEvens extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   shouldComponentUpdate(nextProps, nextState) {
     console.log("Should I update?");
     // Change code below this line
@@ -62,7 +62,7 @@ class MyComponent10 extends React.Component {
   // Change code below this line
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPress);
-    console.log(this.handleKeyPress);
+    // console.log(this.handleKeyPress);
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyPress);
@@ -118,7 +118,7 @@ class MyComponent8 extends React.Component {
   }
   componentWillMount() {
     // Change code below this line
-    console.log("hello");
+    // console.log("hello");
     // Change code above this line
   }
   render() {
