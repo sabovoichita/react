@@ -5,6 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+// class App2 extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return <div />;
+//   }
+// }
+
+// // Change code below this line
+// ReactDOMServer.renderToString(<App2 />);
+
 class MyComponent13 extends React.Component {
   constructor(props) {
     super(props);
@@ -1154,6 +1166,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* <App2 /> */}
     <MyComponent13 />
     <Frameworks />
     <MyToDoList />
