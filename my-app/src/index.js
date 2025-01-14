@@ -5,6 +5,62 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+const inputStyle1 = {
+  width: 235,
+  margin: 5,
+};
+
+class CheckUserAge extends React.Component {
+  constructor(props) {
+    super(props);
+    // Change code below this line
+    this.state = {
+      display: true,
+      userAge: "",
+      input: "",
+    };
+
+    // Change code above this line
+    this.submit = this.submit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    this.setState({
+      input: e.target.value,
+      userAge: "",
+    });
+  }
+  submit() {
+    this.setState((state) => ({
+      userAge: state.input,
+    }));
+  }
+  render() {
+    const buttonOne = <button onClick={this.submit}>Submit</button>;
+    const buttonTwo = <button>You May Enter</button>;
+    const buttonThree = <button>You Shall Not Pass</button>;
+    return (
+      <div>
+        <h3>Enter Your Age to Continue</h3>
+        <input
+          style={inputStyle1}
+          type="number"
+          value={this.state.input}
+          onChange={this.handleChange}
+        />
+        <br />
+        {/* Change code below this line */}
+        {this.state.userAge === ""
+          ? buttonOne
+          : parseInt(this.state.userAge, 10) < 18
+          ? buttonThree
+          : buttonTwo}
+        {/* Change code above this line */}
+      </div>
+    );
+  }
+}
+
 class MyComponent12 extends React.Component {
   constructor(props) {
     super(props);
@@ -907,6 +963,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <CheckUserAge />
     <MyComponent12 />
     <MyComponent11 />
     <MagicEightBall />
