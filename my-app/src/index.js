@@ -5,6 +5,37 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+class MyComponent12 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true,
+    };
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState((state) => ({
+      display: !state.display,
+    }));
+  }
+  render() {
+    // Change code below this line
+    return (
+      (this.state.display === true && (
+        <div>
+          <button onClick={this.toggleDisplay}>Toggle Display</button>
+          <h1>Displayed!</h1>
+        </div>
+      )) ||
+      (this.state.display === false && (
+        <div>
+          <button onClick={this.toggleDisplay}>Toggle Display</button>
+        </div>
+      ))
+    );
+  }
+}
+
 class MyComponent11 extends React.Component {
   constructor(props) {
     super(props);
@@ -876,6 +907,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MyComponent12 />
     <MyComponent11 />
     <MagicEightBall />
     <Colorful1 />
