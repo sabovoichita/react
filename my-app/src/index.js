@@ -5,6 +5,27 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PropTypes from "prop-types";
 
+const frontEndFrameworks = [
+  "React",
+  "Angular",
+  "Ember",
+  "Knockout",
+  "Backbone",
+  "Vue",
+];
+
+function Frameworks() {
+  const renderFrameworks = frontEndFrameworks.map((item) => (
+    <li key={item}>{item}</li>
+  )); // Change this line
+  return (
+    <div>
+      <h1>Popular Front End JavaScript Frameworks</h1>
+      <ul>{renderFrameworks}</ul>
+    </div>
+  );
+}
+
 const textAreaStyles = {
   width: 235,
   margin: 5,
@@ -1086,6 +1107,7 @@ const JSX2 = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Frameworks />
     <MyToDoList />
     <GateKeeper />
     <GameOfChance />
